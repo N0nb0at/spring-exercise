@@ -1,0 +1,17 @@
+spring:
+  profiles.active: dev
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/db_exercise?useUnicode=true&characterEncoding=utf8
+    username: developer
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 3
+    max-active: 10
+    min-idle: 1
+    validation-query: SELECT 1
+mybatis:
+  config-location: classpath:mybatis-config.xml
